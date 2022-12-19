@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax" />
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="stylesheet" href="./CSS/nav.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li><a href="#">会社概要</a></li>
+        <li><a href="#">事業内容</a></li>
+        <li><a href="#">採用情報</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+        <div class="nav-box"></div>
+      </ul>
+    </div>
+
+    <div>
+      <div class="btns">
+        <button>热销</button>
+        <button>推荐</button>
+        <button>经典</button>
+      </div>
+      <div class="contents">
+        <div>
+          <span>热销第一名</span>
+          <div><img src="./James WebbPillars of Creation .png" alt="" /></div>
+          <div><img src="./Kraken.png"/></div>
+          <div><img src="./sc-iae2952-eventprogram-web-21-9.png>"></div>
+        </div>
+        <div>
+          <span>推荐五颗星</span>
+          <div><img src="./James WebbPillars of Creation .png" alt="" /></div>
+          <div><img src="./Kraken.png" alt="" /></div>
+          <div><img src="./sc-iae2952-eventprogram-web-21-9.png" alt="" /></div>
+        </div>
+        <div>
+          <span>经典永流传</span>
+          <div><img src="./James WebbPillars of Creation .png" alt="" /></div>
+          <div><img src="./Kraken.png" alt="" /></div>
+          <div><img src="./sc-iae2952-eventprogram-web-21-9.png" alt="" /></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      //1、获取所有的button按钮
+      var _btns = document.querySelectorAll(".btns button");
+      var _contents = document.querySelectorAll(".contents>div");
+      _btns.forEach(function (btn, index) {
+        btn.onclick = function () {
+          //对应的contents的下标显示
+          _contents[index].style.display = "block";
+          //对应的contens的其他下标隐藏
+          _contents.forEach(function (item, i) {
+            if (index != i) {
+              _contents[i].style.display = "none";
+            }
+          });
+        };
+      });
+    </script>
+  </body>
+</html>
